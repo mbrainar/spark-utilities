@@ -1,5 +1,6 @@
 """
 This will take a CSV file, parse it for an email field, and add each email to an existing room
+This functionality exists in https://sparkpowerpack.com as well, with a GUI wrapper
 
 """
 
