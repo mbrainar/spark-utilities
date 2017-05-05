@@ -13,7 +13,7 @@ spark = CiscoSparkAPI(access_token=_my_spark_token)
 file = "test.csv"
 
 with open(file) as csvfile:
-	reader = csv.DictReader(csvfile)
-	for row in reader:
-		message = "Hello {}. This is an automated message.".format(row['First Name'])
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        message = "Hello {}. This is an automated message.".format(row['First Name'])
         spark.messages.create(toPersonEmail=row['Email'],markdown=message)
