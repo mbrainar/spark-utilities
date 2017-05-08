@@ -1,5 +1,7 @@
 """
 This will take a CSV file, parse it for an email field, and send a message to each email
+**Note:** this will not work with users that are not already registered with Spark;
+use new-room-invite-user-send-message.py instead.
 
 """
 
