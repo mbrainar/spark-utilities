@@ -11,14 +11,14 @@ import csv
 _my_spark_token = os.environ.get("MYSPARKTOKEN")
 spark = CiscoSparkAPI(access_token=_my_spark_token)
 
-room_name = ""
+room_name = "DevNet Express DNA Dublin"
 rooms = spark.rooms.list()
 for r in rooms:
     if r.title == room_name:
         room_id = r.id
         break
 
-file = "test.csv"
+file = "report-2017-05-12T2306.csv"
 
 with open(file) as csvfile:
     reader = csv.DictReader(csvfile)
